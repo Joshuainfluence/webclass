@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -6,18 +6,27 @@
     font-family: Nunito;
 }
 
+body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-header{
+header {
     width: 100%;
     height: 10vh;
     border: 0px solid red;
     display: flex;
     justify-content: center;
-    box-shadow: 2px 4px 10px rgba(0,0,0, 0.2);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
     position: fixed;
+    z-index: 1;
+    background: white;
 }
 
-nav{
+nav {
     display: flex;
     border: 0px solid green;
     width: 80%;
@@ -26,53 +35,118 @@ nav{
     align-items: center;
 }
 
-ul{
+ul {
     display: flex;
-    list-style:none;
+    list-style: none;
 }
-ul li{
+
+ul li {
     padding-left: 1rem;
     color: black;
 }
-li a{
+
+li a {
     color: black;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-.logo{
+.logo {
     width: 10%;
     font-size: 1.5rem;
     font-weight: 500;
 }
 
-ul{
+ul {
     width: 40%;
 }
 
-.buttons{
+.buttons {
     width: 40%;
     display: flex;
     justify-content: end;
 }
-.buttons a{
- 
+
+.buttons a {
+
     padding: 0.5rem 1.3rem 0.5rem 1.3rem;
     border-radius: 1.3rem;
 }
 
-.buttons a:nth-child(1){
+.buttons a:nth-child(1) {
     background: white;
-    color: rgba(0,0,0,0.7);
+    color: rgba(0, 0, 0, 0.7);
     border: 1px solid rgba(0, 0, 0, 0.3);
     margin-right: 0.5rem;
 }
 
-.buttons a:nth-child(2){
+.buttons a:nth-child(2) {
     background: #5489ff;
     color: white;
     border: 1px solid #5489ff;
 }
 
+section#home {
+    width: 84%;
+    height: 100vh;
+    border: 0px solid purple;
+    margin-top: 10%;
+    z-index: 0;
+    display: flex;
+}
+
+section#home .col:nth-child(1) {
+    width: 40%;
+    border: 0px solid blue;
+    height: 72%;
+}
+
+section#home .col:nth-child(2) {
+    width: 60%;
+    height: 72%;
+    border: 0px solid red;
+    background: url(images/home.svg);
+    background-size: cover;
+}
+
+section#home h1 {
+    font-size: 4.1rem;
+}
+
+section#home h3 {
+    font-size: 1.1rem;
+    color: rgba(0,0,0,0.4);
+    font-weight: 300;
+}
+
+
+section#home .col:nth-child(1) .homebuttons{
+    width: 100%;
+    height: 100px;
+    border: 0px solid red;
+    margin-top: 1.5rem;
+}
+
+section#home .col:nth-child(1) .homebuttons a:nth-child(1){
+   padding: 0.7rem 1.3rem 0.7rem 1.3rem;
+   background: #5489ff;
+   color: white;
+   border-radius: 1.3rem;
+}
+
+section#home .col:nth-child(1) .homebuttons a:nth-child(2){
+   padding: 0.7rem 1.3rem 0.7rem 1.3rem;
+   border:1px solid #5489ff;
+   color: #5489ff;
+   border-radius: 1.3rem;
+}
+
+section#home .col:nth-child(1) .homebuttons a:nth-child(2):hover{
+   padding: 0.7rem 1.3rem 0.7rem 1.3rem;
+   border:1px solid #5489ff;
+   background: #5489ff;
+   color: white;
+   border-radius: 1.3rem;
+}
