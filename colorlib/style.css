@@ -7,7 +7,9 @@
 
 }
 
-html{scroll-behavior: smooth;}
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     width: 100%;
@@ -66,7 +68,7 @@ ul {
     width: 40%;
 }
 
-.dropdownmenu{
+.dropdownmenu {
     position: absolute;
     width: 120px;
     height: 100px;
@@ -76,13 +78,17 @@ ul {
     background: white;
     z-index: 1;
     display: none;
-    box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.dropdown:hover .dropdownmenu{
+.dropdown:hover .dropdownmenu {
     display: flex;
-    transition: 0.4s ;
+    transition: 0.4s;
     cursor: pointer;
+}
+
+.dropdownmenu li a:hover {
+    color: blue;
 }
 
 .buttons {
@@ -101,6 +107,13 @@ ul {
     background: white;
     color: rgba(0, 0, 0, 0.7);
     border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-right: 0.5rem;
+}
+
+.buttons a:nth-child(1):hover {
+    background: white;
+    color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(0, 0, 0);
     margin-right: 0.5rem;
 }
 
@@ -142,38 +155,38 @@ section#home h1 {
 
 section#home h3 {
     font-size: 1.1rem;
-    color: rgba(0,0,0,0.4);
+    color: rgba(0, 0, 0, 0.4);
     font-weight: 300;
 }
 
 
-section#home .col:nth-child(1) .homebuttons{
+section#home .col:nth-child(1) .homebuttons {
     width: 100%;
     height: 100px;
     border: 0px solid red;
     margin-top: 1.5rem;
 }
 
-section#home .col:nth-child(1) .homebuttons a:nth-child(1){
-   padding: 0.7rem 1.3rem 0.7rem 1.3rem;
-   background: #5489ff;
-   color: white;
-   border-radius: 1.3rem;
+section#home .col:nth-child(1) .homebuttons a:nth-child(1) {
+    padding: 0.7rem 1.3rem 0.7rem 1.3rem;
+    background: #5489ff;
+    color: white;
+    border-radius: 1.3rem;
 }
 
-section#home .col:nth-child(1) .homebuttons a:nth-child(2){
-   padding: 0.7rem 1.3rem 0.7rem 1.3rem;
-   border:1px solid #5489ff;
-   color: #5489ff;
-   border-radius: 1.3rem;
+section#home .col:nth-child(1) .homebuttons a:nth-child(2) {
+    padding: 0.7rem 1.3rem 0.7rem 1.3rem;
+    border: 1px solid #5489ff;
+    color: #5489ff;
+    border-radius: 1.3rem;
 }
 
-section#home .col:nth-child(1) .homebuttons a:nth-child(2):hover{
-   padding: 0.7rem 1.3rem 0.7rem 1.3rem;
-   border:1px solid #5489ff;
-   background: #5489ff;
-   color: white;
-   border-radius: 1.3rem;
+section#home .col:nth-child(1) .homebuttons a:nth-child(2):hover {
+    padding: 0.7rem 1.3rem 0.7rem 1.3rem;
+    border: 1px solid #5489ff;
+    background: #5489ff;
+    color: white;
+    border-radius: 1.3rem;
 }
 
 
@@ -212,49 +225,89 @@ section#about h1 {
 
 section#about h3 {
     font-size: 1.1rem;
-    color: rgba(0,0,0,0.4);
+    color: rgba(0, 0, 0, 0.4);
     font-weight: 300;
 }
 
 
-section#about .col:nth-child(1) .homebuttons{
+section#about .col:nth-child(1) .homebuttons {
     width: 100%;
     height: 100px;
     border: 0px solid red;
     margin-top: 1.5rem;
 }
 
-section#about .col:nth-child(1) .homebuttons a:nth-child(1){
-   padding: 0.7rem 1.3rem 0.7rem 1.3rem;
-   background: #5489ff;
-   color: white;
-   border-radius: 1.3rem;
+section#about .col:nth-child(1) .homebuttons a:nth-child(1) {
+    padding: 0.7rem 1.3rem 0.7rem 1.3rem;
+    background: #5489ff;
+    color: white;
+    border-radius: 1.3rem;
 }
 
-section#about .col:nth-child(1) .homebuttons a:nth-child(2){
-   padding: 0.7rem 1.3rem 0.7rem 1.3rem;
-   border:1px solid #5489ff;
-   color: #5489ff;
-   border-radius: 1.3rem;
+section#about .col:nth-child(1) .homebuttons a:nth-child(2) {
+    padding: 0.7rem 1.3rem 0.7rem 1.3rem;
+    border: 1px solid #5489ff;
+    color: #5489ff;
+    border-radius: 1.3rem;
 }
 
-section#about .col:nth-child(1) .homebuttons a:nth-child(2):hover{
-   padding: 0.7rem 1.3rem 0.7rem 1.3rem;
-   border:1px solid #5489ff;
-   background: #5489ff;
-   color: white;
-   border-radius: 1.3rem;
+section#about .col:nth-child(1) .homebuttons a:nth-child(2):hover {
+    padding: 0.7rem 1.3rem 0.7rem 1.3rem;
+    border: 1px solid #5489ff;
+    background: #5489ff;
+    color: white;
+    border-radius: 1.3rem;
 }
 
-.gradient{
+.gradient {
     width: 100%;
     height: 100%;
-    background: black;
+    background: linear-gradient(red, black, blue);
     opacity: 0;
     transition: 0.8;
 }
 
-.gradient:hover{
+.gradient:hover {
     cursor: pointer;
     opacity: 0.4;
+}
+
+@media (max-width:750px) {
+    ul {
+        display: none;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .buttons a {
+        padding: 0.3rem 1.8rem 0.3rem 1.8rem;
+        display: flex;
+        align-items: center;
+        border-radius: 1.8rem;
+    }
+
+    section#home {
+        margin-top: 20%;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    section#home .col:nth-child(1) {
+        width: 100%;
+
+    }
+
+    section#about {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    section#about .col:nth-child(1) {
+        width: 100%;
+
+    }
+
+
 }
