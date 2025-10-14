@@ -4,7 +4,10 @@
     box-sizing: border-box;
     @import url(https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
     font-family: Nunito;
+
 }
+
+html{scroll-behavior: smooth;}
 
 body {
     width: 100%;
@@ -63,6 +66,25 @@ ul {
     width: 40%;
 }
 
+.dropdownmenu{
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    border: 0px solid blueviolet;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    z-index: 1;
+    display: none;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.3);
+}
+
+.dropdown:hover .dropdownmenu{
+    display: flex;
+    transition: 0.4s ;
+    cursor: pointer;
+}
+
 .buttons {
     width: 40%;
     display: flex;
@@ -113,6 +135,9 @@ section#home .col:nth-child(2) {
 
 section#home h1 {
     font-size: 4.1rem;
+    background: linear-gradient(red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 section#home h3 {
@@ -149,4 +174,87 @@ section#home .col:nth-child(1) .homebuttons a:nth-child(2):hover{
    background: #5489ff;
    color: white;
    border-radius: 1.3rem;
+}
+
+
+/* design this for about section */
+
+
+section#about {
+    width: 84%;
+    height: 100vh;
+    border: 0px solid purple;
+    margin-top: 10%;
+    z-index: 0;
+    display: flex;
+}
+
+section#about .col:nth-child(1) {
+    width: 40%;
+    border: 0px solid blue;
+    height: 72%;
+}
+
+section#about .col:nth-child(2) {
+    width: 60%;
+    height: 72%;
+    border: 0px solid red;
+    background: url(images/dashboard.jpg.webp);
+    background-size: cover;
+}
+
+section#about h1 {
+    font-size: 4.1rem;
+    background: linear-gradient(red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section#about h3 {
+    font-size: 1.1rem;
+    color: rgba(0,0,0,0.4);
+    font-weight: 300;
+}
+
+
+section#about .col:nth-child(1) .homebuttons{
+    width: 100%;
+    height: 100px;
+    border: 0px solid red;
+    margin-top: 1.5rem;
+}
+
+section#about .col:nth-child(1) .homebuttons a:nth-child(1){
+   padding: 0.7rem 1.3rem 0.7rem 1.3rem;
+   background: #5489ff;
+   color: white;
+   border-radius: 1.3rem;
+}
+
+section#about .col:nth-child(1) .homebuttons a:nth-child(2){
+   padding: 0.7rem 1.3rem 0.7rem 1.3rem;
+   border:1px solid #5489ff;
+   color: #5489ff;
+   border-radius: 1.3rem;
+}
+
+section#about .col:nth-child(1) .homebuttons a:nth-child(2):hover{
+   padding: 0.7rem 1.3rem 0.7rem 1.3rem;
+   border:1px solid #5489ff;
+   background: #5489ff;
+   color: white;
+   border-radius: 1.3rem;
+}
+
+.gradient{
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    transition: 0.8;
+}
+
+.gradient:hover{
+    cursor: pointer;
+    opacity: 0.4;
 }
