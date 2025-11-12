@@ -38,12 +38,3 @@ console.log("5" === 5) // === compares directly
 
 console.log(5 == 5)
 console.log(5 === 5)
-
-
-
-
-
-
-
-
-
