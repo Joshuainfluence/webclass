@@ -9,5 +9,5 @@ name[0] = "P"
 
 
 
-console.log(fruits)
+console.log(fruits) 
 console.log(name)
