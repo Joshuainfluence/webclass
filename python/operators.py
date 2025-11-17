@@ -1,6 +1,6 @@
 # arithmetic operators
 x = 10
-y = 20
+y = 10
 result = x + y
 # + for addition
 print(result)
@@ -21,3 +21,19 @@ print(x % 4)
 
 # for multiplication
 print(x * y)
+
+# assigment operators
+p = 10
+p += 10
+
+print(p)
+
+# logical operators
+# and and or
+
+
+
+# comparison operators
+print(x >= y)                                                                                                                                                                                    
+print(x<= y)
+print(x == y)
