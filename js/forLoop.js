@@ -33,3 +33,11 @@ for (let i = 0; i <= 100; i++){
 }
 
 
+
+let even_nums = [];
+for(let i =0; i <= 100; i++){
+    if(i % 2 == 0){
+        even_nums.push(i)
+    }
+}
+console.log(even_nums)
