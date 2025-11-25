@@ -84,7 +84,7 @@
 
     function displayUsers(users) {
       const container = document.getElementById("userContainer");
-      container.innerHTML = ""; // clear old data
+      container.innerHTML = ""; 
 
       users.forEach(user => {
         const card = document.createElement("div");
@@ -92,9 +92,9 @@
 
         card.innerHTML = `
           <div class="name">${user.name}</div>
-          <div class="email">📧 ${user.email}</div>
-          <div class="phone">📞 ${user.phone}</div>
-          <div class="city">🏙️ ${user.address.city}</div>
+          <div class="email"> ${user.email}</div>
+          <div class="phone"> ${user.phone}</div>
+          <div class="city"> ${user.address.city}</div>
         `;
 
         container.appendChild(card);
