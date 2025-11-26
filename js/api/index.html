@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            @import url(https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+            font-family: Nunito;
+
+        }
+        .container {
+            width: 100%;
+            height: auto;
+            background-color: lightgray;
+        }  
+        .row{
+            width: 100%;
+            height: auto;
+            border: 2px solid red;
+            display: flex;
+          
+        } 
+
+        .col:nth-child(1){
+            width: 20%;
+            height: 100vh;
+            background: black;
+            position: fixed;
+        
+        }
+
+        .col:nth-child(2){
+            width: 80%;
+            height: auto;
+            border: 2px solid blue;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-left: 20%;
+            
+        }
+
+        .card{
+            width: 40%;
+            height: 300px;
+            /* padding: 5rem; */
+            background: white;
+            color: black;
+            /* box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); */
+            box-shadow: 12px 12px 10px  rgba(0, 0, 0, 0.2);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem;
+        }
+
+        img{
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col" >
+
+            </div>
+
+            <div class="col" id="column">
+                <!-- <h1>View users</h1> -->
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        users = [
+            {id: 1, email: "micheal@gmail.com", username: "micheal430", location: "USA", photo: "img/a.jpg "},
+            {id: 2, email: "kristabel", username: "kristabel99", location: "UK", photo: "img/b.jpg"},
+            {id: 3, email: "merlin", username: "merlin22", location: "India", photo: "img/c.jpg"},
+            {id: 4, email: "sandra", username: "sandra77", location: "Canada", photo: "img/d.jpg"},
+            {id: 5, email: "james", username: "james123", location: "Australia", photo: "img/e.jpg"},
+            {id: 6, email: "laura", username: "laura456", location: "Germany", photo: "img/f.jpg"},
+        ]
+
+        users.forEach(user => {
+            const column = document.getElementById("column")
+            const card = document.createElement("div")
+            card.className = "card"
+            card.innerHTML = `
+                <h1>${user.email}</h1>
+                <img src=${user.photo} >
+                <h3>${user.location} </h3>
+                <h3>${user.email} </h3>
+
+            `
+
+            column.appendChild(card)
+        })
+    </script>
+</body>
+</html>
