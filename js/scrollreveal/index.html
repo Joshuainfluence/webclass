@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 50px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            border: 1px solid #e0e0e0;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="card reveal">
+            <h2>Card One</h2>
+            <p>Hi, my name is  influence.</p>
+        </div>
+
+        <div class="card reveal">
+            <h2>Card Two</h2>
+            <p>Hi, my name is  influence.</p>
+        </div>
+
+        <div class="card reveal">
+            <h2>Card Three</h2>
+            <p>Hi, my name is  influence</p>
+        </div>
+
+         <div class="card reveal">
+            <h2>Card Three</h2>
+            <p>Hi, my name is  influence</p>
+        </div>
+         <div class="card reveal">
+            <h2>Card Three</h2>
+            <p>Hi, my name is  influence</p>
+        </div>
+         <div class="card reveal">
+            <h2>Card Three</h2>
+            <p>Hi, my name is  influence</p>
+        </div>
+         <div class="card reveal">
+            <h2>Card Three</h2>
+            <p>Hi, my name is  influence</p>
+        </div>
+         <div class="card reveal">
+            <h2>Card Three</h2>
+            <p>Hi, my name is  influence</p>
+        </div>
+         <div class="card reveal">
+            <h2>Card Three</h2>
+            <p>Hi, my name is  influence</p>
+        </div>
+         <div class="card reveal">
+            <h2>Card Three</h2>
+            <p>Hi, my name is  influence</p>
+        </div>
+         <div class="card reveal">
+            <h2>Card Three</h2>
+            <p>Hi, my name is  influence</p>
+        </div>
+         <div class="card reveal">
+            <h2>Card Three</h2>
+            <p>Hi, my name is  influence</p>
+        </div>
+    </div>
+
+   
+
+    <script>
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const revealTop = el.getBoundingClientRect().top;
+                const revealPoint = 150; 
+                if (revealTop < windowHeight - revealPoint) {
+                    el.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .container{
+            width: 100%;
+            /* height: 2000px; */
+            background: lightgray;
+            display: flex;
+            flex-wrap: wrap;
+         }
+
+         .col{
+            /* width: 20%; */
+           padding: 10rem;
+            border: 2px solid red;
+            margin-bottom: 10px;
+            background: white;
+            margin: 1rem;
+            opacity: 0;
+         }
+
+            .col.show{
+                opacity: 1;
+                transition: 3s ;
+                transform: rotate(360deg);
+            }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+
+        </div>
+
+         <div class="col">
+            
+        </div>
+
+         <div class="col">
+            
+        </div>
+
+         <div class="col">
+            
+        </div>
+         <div class="col">
+            
+        </div>
+         <div class="col">
+            
+        </div>
+         <div class="col">
+            
+        </div>
+         <div class="col">
+            
+        </div>
+         <div class="col">
+            
+        </div>
+         <div class="col">
+            
+        </div>
+         <div class="col">
+            
+        </div>
+         <div class="col">
+            
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', ()=> {
+            const columns = document.querySelectorAll('.col')
+
+            columns.forEach(column=> {
+                const pageHeight = window.innerHeight;
+                const columnSpace = column.getBoundingClientRect().top
+                const revealSpace = 200;
+
+              
+
+                if(columnSpace < pageHeight - revealSpace){
+                    column.classList.add('show')
+                }else{
+                    column.classList.remove('show')
+                }
+
+            })
+        })
+
+         window.addEventListener('load', ()=> {
+            const columns = document.querySelectorAll('.col')
+
+            columns.forEach(column=> {
+                const pageHeight = window.innerHeight;
+                const columnSpace = column.getBoundingClientRect().top
+                const revealSpace = 200;
+
+              
+
+                if(columnSpace < pageHeight - revealSpace){
+                    column.classList.add('show')
+                }
+
+            })
+        })
+    </script>
+</body>
+</html>
