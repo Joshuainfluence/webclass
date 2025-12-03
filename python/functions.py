@@ -1,77 +1,83 @@
-# def greeting():
-#     print("Hello world")
+def greeting():
+    print("Hello world")
 
-# greeting()
+greeting()
 
-# # functions with parameters and arguments
-# def greetMe(x):
-#     print(f"Hello {x}")
-# greetMe("Leo")
+# functions with parameters and arguments
+def greetMe(x):
+    print(f"Hello {x}")
+greetMe("Leo")
 
-# # functions with parameters, arguments and inputs
-# # nameInput = input("Enter Username here: ")
-# # ageInput = input("Enter age here: ")
-# # def user(name, age):
-# #     print(f"Hello your name is {name} na your {age} years old")
-# # user(nameInput, ageInput)
+# functions with parameters, arguments and inputs
+# nameInput = input("Enter Username here: ")
+# ageInput = input("Enter age here: ")
+# def user(name, age):
+#     print(f"Hello your name is {name} na your {age} years old")
+# user(nameInput, ageInput)
 
-# # function to add numbers
-# def addMyNumber(x, y):
-#     print(x + y)
-# # addMyNumber(5, 10)
-
-
-# # function to add numbers with inputs
-# # firstNumber = int(input("Enter your first number: "))
-# # secondNumber = int(input("Enter your second number: "))
-# # thirdNumber = int(input("Enter your third number: "))
+# function to add numbers
+def addMyNumber(x, y):
+    print(x + y)
+# addMyNumber(5, 10)
 
 
-# def addMyNumberInput(x, y, z):
-#     print(x + y + z)
-# # addMyNumberInput(firstNumber, secondNumber, thirdNumber)
+# function to add numbers with inputs
+# firstNumber = int(input("Enter your first number: "))
+# secondNumber = int(input("Enter your second number: "))
+# thirdNumber = int(input("Enter your third number: "))
 
 
-# # function for multitple values
-
-# def addAll(*args):
-#     return sum(args)
-# print(addAll(1, 2, 3, 5, 56, 76))
-
-# # function with parameters, arguments, conditionals and inputs
-# def login(username, password):
-#     if username != "leo" or password != "leo54":
-#         print("Invalid credentials")
-#     else:
-#         print("Login successful")
-
-# login("leo", "leo54")
+def addMyNumberInput(x, y, z):
+    print(x + y + z)
+# addMyNumberInput(firstNumber, secondNumber, thirdNumber)
 
 
+# function for multitple values
 
+def addAll(*args):
+    return sum(args)
+print(addAll(1, 2, 3, 5, 56, 76))
 
-# calculator function
-firstNumber = int(input("Enter first number: "))
-operator = input(f" {firstNumber} Select an operator \n 1) + \n 2) - \n 3) / \n 4) * \n ")
-secondNumber = None
-
-def calculator(firstNumber, secondNumber, operator):
-    if operator == "1":
-        secondNumber = int(input(f"{firstNumber} + "))
-        print(firstNumber + secondNumber)
-    elif operator == "2":
-        secondNumber = int(input(f"{firstNumber} - "))
-        print(firstNumber - secondNumber)
-    elif operator == "3": 
-        secondNumber = int(input(f"{firstNumber} / "))
-        print(firstNumber / secondNumber)
-    elif operator == "4": 
-        secondNumber = int(input(f"{firstNumber} x "))
-        print(firstNumber * secondNumber)
+# function with parameters, arguments, conditionals and inputs
+def login(username, password):
+    if username != "leo" or password != "leo54":
+        print("Invalid credentials")
     else:
-        print("Invalid operator")
+        print("Login successful")
 
-calculator(firstNumber, secondNumber, operator)
+login("leo", "leo54")
 
 
 
+
+# # calculator function
+# firstNumber = int(input("Enter first number: "))
+# operator = input(f" {firstNumber} Select an operator \n 1) + \n 2) - \n 3) / \n 4) * \n ")
+# secondNumber = None
+
+# def calculator(firstNumber, secondNumber, operator):
+#     if operator == "1":
+#         secondNumber = int(input(f"{firstNumber} + "))
+#         print(firstNumber + secondNumber)
+#     elif operator == "2":
+#         secondNumber = int(input(f"{firstNumber} - "))
+#         print(firstNumber - secondNumber)
+#     elif operator == "3": 
+#         secondNumber = int(input(f"{firstNumber} / "))
+#         print(firstNumber / secondNumber)
+#     elif operator == "4": 
+#         secondNumber = int(input(f"{firstNumber} x "))
+#         print(firstNumber * secondNumber)
+#     else:
+#         print("Invalid operator")
+
+# calculator(firstNumber, secondNumber, operator)
+firstName = input("Enter first name: ")
+lastName = input("Enter last name: ")
+location = input("Enter location: ")
+
+def create_user(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+    
+create_user(first=firstName, last= lastName, living=location, hobby="eating")
