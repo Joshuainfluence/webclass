@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font_awesome/css/font-awesome.css">
+</head>
+<body>
+    <header>
+       
+            <div class="logo">
+                INFLUENCE
+            </div>
+
+            <button id="nav-toggle" aria-expanded="false" aria-controls="#nav-tabs">
+                <i class="fa fa-bars"></i>
+            </button>
+
+           
+
+            <ul id="nav-tabs"  data-visible="false">
+                <li>home</li>
+                <li>about</li>
+                <li>feature</li>
+                <li>home</li>
+                <li>pricing</li>
+                <li>nawe</li>
+            </ul>
+       <!-- <button id="closebtn">
+                <i class="fa fa-close"></i>
+            </button> -->
+    </header>
+
+    <script>
+        const toggleButton = document.getElementById('nav-toggle')
+        const ulTabs = document.getElementById('nav-tabs')
+        const icon = document.querySelector('.fa')
+        toggleButton.addEventListener('click', ()=> {
+            
+            const visible = ulTabs.getAttribute("data-visible")
+            if(visible === "false"){
+                ulTabs.setAttribute("data-visible", true)
+                icon.classList.remove("fa-bars")
+                icon.classList.add("fa-close")
+            }else{
+                ulTabs.setAttribute("data-visible", false)
+                 icon.classList.remove("fa-close")
+                icon.classList.add("fa-bars")
+            }
+        })
+    </script>
+</body>
+</html>
