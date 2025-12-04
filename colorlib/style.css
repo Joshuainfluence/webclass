@@ -68,6 +68,17 @@ ul {
     width: 40%;
 }
 
+
+#nav-toggle{
+    background: none;
+    border: none;
+    font-size: 2rem;
+    padding: 3rem;
+    display: none;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
 .dropdownmenu {
     position: absolute;
     width: 120px;
@@ -287,6 +298,10 @@ section#about .col:nth-child(1) .homebuttons a:nth-child(2):hover {
         display: flex;
         align-items: center;
         border-radius: 1.8rem;
+    }
+
+    #nav-toggle{
+        display: block;
     }
 
     section#home {

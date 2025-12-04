@@ -9,6 +9,8 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
         rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="font_awesome/css/font-awesome.css">
 </head>
 
 <body>
@@ -18,7 +20,7 @@
                 Launch
             </div>
 
-            <ul>
+            <ul id="nav-tabs">
                 <li><a href="#home">Home</a></li>
                 <li class="dropdown">Dropdown
                     <ul class="dropdownmenu">
@@ -29,7 +31,7 @@
                 </li>
                 <li><a href="">Features</a></li>
                 <li><a href="">Pricing</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">About </a></li>
                 <li><a href="">Contact</a></li>
             </ul>
 
@@ -37,6 +39,17 @@
                 <a href="">Signin</a>
                 <a href="">Register</a>
             </div>
+
+            <button id="nav-toggle">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <script>
+                const buttonToggle = document.getElementById('nav-toggle')
+                buttonToggle.addEventListener('click', ()=> {
+                    console.log("You have clicked the button")
+                })
+            </script>
         </nav>
     </header>
 
