@@ -50,26 +50,26 @@ login("leo", "leo54")
 
 
 
-# # calculator function
-# firstNumber = int(input("Enter first number: "))
-# operator = input(f" {firstNumber} Select an operator \n 1) + \n 2) - \n 3) / \n 4) * \n ")
-# secondNumber = None
+# calculator function
+firstNumber = int(input("Enter first number: "))
+operator = input(f" {firstNumber} Select an operator \n 1) + \n 2) - \n 3) / \n 4) * \n ")
+secondNumber = None
 
-# def calculator(firstNumber, secondNumber, operator):
-#     if operator == "1":
-#         secondNumber = int(input(f"{firstNumber} + "))
-#         print(firstNumber + secondNumber)
-#     elif operator == "2":
-#         secondNumber = int(input(f"{firstNumber} - "))
-#         print(firstNumber - secondNumber)
-#     elif operator == "3": 
-#         secondNumber = int(input(f"{firstNumber} / "))
-#         print(firstNumber / secondNumber)
-#     elif operator == "4": 
-#         secondNumber = int(input(f"{firstNumber} x "))
-#         print(firstNumber * secondNumber)
-#     else:
-#         print("Invalid operator")
+def calculator(firstNumber, secondNumber, operator):
+    if operator == "1":
+        secondNumber = int(input(f"{firstNumber} + "))
+        print(firstNumber + secondNumber)
+    elif operator == "2":
+        secondNumber = int(input(f"{firstNumber} - "))
+        print(firstNumber - secondNumber)
+    elif operator == "3": 
+        secondNumber = int(input(f"{firstNumber} / "))
+        print(firstNumber / secondNumber)
+    elif operator == "4": 
+        secondNumber = int(input(f"{firstNumber} x "))
+        print(firstNumber * secondNumber)
+    else:
+        print("Invalid operator")
 
 # calculator(firstNumber, secondNumber, operator)
 firstName = input("Enter first name: ")
