@@ -73,7 +73,7 @@ ul {
     background: none;
     border: none;
     font-size: 2rem;
-    padding: 3rem;
+    padding: 2rem;
     display: none;
     position: absolute;
     right: 0;
@@ -285,10 +285,37 @@ section#about .col:nth-child(1) .homebuttons a:nth-child(2):hover {
 
 @media (max-width:750px) {
     ul {
-        display: none;
+        display: block;
+        position: absolute;
+        right: 0;
+        border: 0 solid red;
+        box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+        padding: 4rem 2rem 4rem 2rem;
+        height: 100vh;
+        top: 0;
+        background-color: white;
+        width: 50%;
+        transform: translateX(100%);
+        transition: 0.6s;
     }
 
+    ul li{
+        padding: 1rem;
 
+    }
+
+    ul[data-visible="true"]{
+        transform: translateX(0%);
+    }
+
+    ul li:hover{
+        background: #5489ff;
+        
+    }
+
+    ul li:hover a{
+        color: white;
+    }
     .logo {
         width: 50%;
     }

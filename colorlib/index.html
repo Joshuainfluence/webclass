@@ -9,8 +9,10 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
         rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="font_awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="font_awesome/css/font-awesome.css">
 </head>
 
 <body>
@@ -20,14 +22,14 @@
                 Launch
             </div>
 
-            <ul id="nav-tabs">
+            <ul id="nav-tabs" data-visible="false">
                 <li><a href="#home">Home</a></li>
                 <li class="dropdown">Dropdown
-                    <ul class="dropdownmenu">
+                    <!-- <ul class="dropdownmenu">
                         <li><a href="">Testimonials</a></li>
                         <li><a href="">Menu two</a></li>
                         <li><a href="">Menu three</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
                 <li><a href="">Features</a></li>
                 <li><a href="">Pricing</a></li>
@@ -46,8 +48,20 @@
 
             <script>
                 const buttonToggle = document.getElementById('nav-toggle')
-                buttonToggle.addEventListener('click', ()=> {
-                    console.log("You have clicked the button")
+                const icon = document.querySelector('.fa')
+                const navTabs = document.getElementById('nav-tabs')
+                buttonToggle.addEventListener('click', () => {
+                    const visible = navTabs.getAttribute('data-visible')
+                    if (visible === "false") {
+                        console.log("You have clicked the button")
+                        navTabs.setAttribute('data-visible', "true")
+                        icon.classList.remove('fa-bars')
+                        icon.classList.add('fa-close')
+                    }else{
+                        navTabs.setAttribute('data-visible', "false")
+                        icon.classList.remove('fa-close')
+                        icon.classList.add('fa-bars')
+                    }
                 })
             </script>
         </nav>
