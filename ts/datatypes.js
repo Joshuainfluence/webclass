@@ -1,6 +1,6 @@
-function greet(name) {
-    return "Hello, ".concat(name);
-}
-console.log(greet("TypeScript"));
-// const log = (msg: string): void => console.log(msg);
-// log("This is a log message.");
+var myName = "INFLUENCE";
+console.log(myName);
+var score = 1892;
+console.log("Score:", score);
+var isLoggedIn = true;
+console.log("Is Logged In:", isLoggedIn);

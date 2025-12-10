@@ -1,8 +1,8 @@
+let myName: string = "INFLUENCE"
+console.log(myName)
 
-function greet(name: string): string {
-    return `Hello, ${name}`;
-}
-console.log(greet("TypeScript"));
+let score: number = 1892
+console.log("Score:", score)
 
-// const log = (msg: string): void => console.log(msg);
-// log("This is a log message.");
+let isLoggedIn: boolean = true
+console.log("Is Logged In:", isLoggedIn)
