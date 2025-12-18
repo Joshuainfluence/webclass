@@ -1,13 +1,20 @@
+import { Routes, Route } from "react-router-dom"
 import Card from "./components/Card"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import Contact from "./pages/Contact"
+
 
 function App() {
 
 
   return (
     <>
-     <h1>Greetings citizens of the world</h1>
-        <Card />
-        <Card />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
 
     </>
   )
