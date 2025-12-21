@@ -9,3 +9,6 @@ def about(request):
 
 def contact(request):
     return HttpResponse("This is the contact page.")
+
+def features(request):
+    return HttpResponse("This is the features page.")
