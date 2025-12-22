@@ -12,3 +12,6 @@ def contact(request):
 
 def features(request):
     return HttpResponse("This is the features page.")
+
+def pricing(request):
+    return HttpResponse("This is the pricing page.")
