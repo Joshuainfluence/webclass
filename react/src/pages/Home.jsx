@@ -9,6 +9,7 @@ const Home = () => {
       <Navbar />
       <Card name="INFLUENCE" occupation="Developer" />
       <h1>Hello, {name}</h1>
+  
     </div>
   )
 }
