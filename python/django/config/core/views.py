@@ -16,5 +16,5 @@ def features(request):
 def pricing(request):
     return HttpResponse("This is the pricing page.")
 
-def pricing(request):
-    return HttpResponse("This is the pricing page.")
+def faq(request):
+    return HttpResponse("This is the faq page.")
