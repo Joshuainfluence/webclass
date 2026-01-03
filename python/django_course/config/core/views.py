@@ -9,3 +9,6 @@ def home(request):
 
 def about(request):
     return HttpResponse("You in the about page!")
+
+def contact(request):
+    return HttpResponse("You in the contact page!")
